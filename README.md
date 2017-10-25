@@ -1,15 +1,19 @@
 # kafka-cli-client
-Docker image contains kafka CLI distribution (and its dependencies)
+PhotonOS-based image containing kafka CLI (and its dependencies)
 
-Docker image with utilities for executing (and debugging) kafka CLI
-tools against a kafka/zookeeper cluster that's hosted externally.
+This image isn't meant for hosting a kafka cluster. Instead, it's
+meant as a debugging tool where we can run the kafka CLI tools against
+a kafka cluster run externally.
 
-Includes:
-* vim
-* curl
-* jq
-* default-jre
+Image includes:
+* `vim`
+* `curl`
+* `openjre`
 * kafka distribution
 
-Configuration
-* bash color prompt
+NOTE: There are wrapper scripts to invoke common kafka commands
+directly from the system path (`/usr/local/bin/`):
+* `kafka-topics`
+* `kafka-console-producer`
+* `kafka-console-consumer`
+* `zookeeper-shell`
