@@ -1,0 +1,2 @@
+#!/bin/sh
+exec ${KAFKA_HOME}/bin/kafka-topics.sh "$@"
