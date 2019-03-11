@@ -9,7 +9,7 @@ RUN tdnf --refresh -y install \
 RUN tdnf clean all
 
 # Install kafka distro
-ENV KAFKA_VER 0.11.0.1
+ENV KAFKA_VER 2.0.1
 ENV KAFKA_HOME /usr/local/lib/kafka
 
 RUN curl -L http://apache.mirrors.pair.com/kafka/${KAFKA_VER}/kafka_2.11-${KAFKA_VER}.tgz \
